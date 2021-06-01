@@ -1,0 +1,254 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+body {
+	margin: 0; 
+	background-color: white;
+}
+
+.page {
+	/*height: 99vh;
+	width: 99%;
+	padding: 1vh 1% 1vh 1%; */
+}
+
+.grid-container {
+	height:100vh;
+	width: 100%;
+	padding: 0;
+	margin: 0;
+	display: grid;
+	grid-gap: 0%; 
+	grid-template-columns: 1.5fr 1fr 1fr 1fr; 
+	grid-template-rows: 1fr 2.5fr 1fr;
+	grid-template-areas: "header header header header"
+						 "progressbar first second third"
+						 "progressbar footer footer footer"
+}
+
+.first{grid-area: first;				border: 3px solid #E2CA87;			background-color: #e2ca879e}
+.second{grid-area: second;				border: 3px solid #4dbd52;			background-color: #4dbd5287}
+.third{grid-area: third;				border: 3px solid #EC7262;			background-color: #ec726266}
+.header{grid-area: header;				border: 3px solid #b6aeae;			background-color: #f2ededb0}
+.progressbar{grid-area: progressbar;	border: 3px solid #86A2F7;			background-color: #cbd8ff85}
+.footer{grid-area: footer;				border: 3px solid #b6aeae;			background-color: #f2ededb0}
+
+.box {
+	border-radius: 20px;
+	margin: 10px;
+	font-family: 'Poppins', sans-serif;
+	display: inline-block;
+	justify-content: center;
+}
+
+.svg {
+	max-width: 90%;
+	padding-top: 4px;
+
+}
+
+.inside-trio > .svg, .inside-prog > .svg {
+	height: 49%;
+
+}
+
+.inside-trio, .inside-prog{
+	height: 100%;
+	width: 100%;
+	display: flex;
+	flex-flow: column wrap;
+	align-items: center;
+	justify-content: flex-start;
+}
+/*.progressbar, .trio {
+	display: flex;
+	flex-flow: column wrap;
+	align-items: center;
+	justify-content: flex-start;
+}*/
+
+.trio-text, .prog-text {
+	position: relative;
+	height: 49%;
+	width: 100%;
+}
+
+.trio-text {
+	display: flex;
+	align-items: center;
+}
+
+.prog-text {
+	display: flex;
+	align-items: space-around;
+	flex-flow: column wrap;
+	justify-content: space-around;
+	overflow: hidden;
+
+}
+
+.button {
+	width: 100%;
+	padding: 1em;
+	height: 5vh;
+	overflow: hidden;
+	position: relative;
+	cursor: pointer;
+	text-decoration: none;
+	color: black;
+	font-size: 20px;
+	color: #fff;
+	
+	/*text-shadow: 1px 1px black, -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black; */
+}
+
+.first .button {
+	/*border-top: 3px solid #E2CA87;
+	border-bottom: 3px solid #E2CA87;*/
+	background-color: #E2CA87;
+}
+
+.second .button {
+	/*-top: 3px solid #4DBD52;
+	border-bottom: 3px solid #4DBD52;*/
+	background-color: #4DBD52;
+}
+
+.third .button {
+	/*border-top: 3px solid #EC7262;
+	border-bottom: 3px solid #EC7262;*/
+	background-color: #EC7262;
+}
+
+.progressbar .button {
+	/*border-top: 3px solid #86A2F7;
+	border-bottom: 3px solid #86A2F7;
+	height: 1vh;*/
+	background-color: #86A2F7;
+	
+
+}
+
+
+.header {
+	display: flex;
+	justify-content: space-between;
+}
+
+.header-text {
+	width: 50%;
+	font-size: 40px;
+	padding: 0.5em;
+	padding-left: 0.9em;
+	padding-top: 0.59em;
+	color: #7e7878;
+} 
+
+.icons {
+	width: 40%;
+	height: 100%;	
+
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content: space-around;
+	align-items: center;
+	/*transition-timing-function: ease;*/
+}
+
+i {
+	font-size: 25px;
+	color: #7e7878;
+	transition: 0.2s;
+}
+
+.fa-bell:hover {color: #E2CA87; font-size: 35px}
+.fa-sign-out-alt:hover {color: #EC7262; font-size: 35px}
+.fa-user-circle:hover {color: #4DBD52; font-size: 35px}
+.fa-question-circle:hover {color: #86A2F7; font-size: 35px}
+
+
+
+
+
+.button:before {
+	content: '';
+	height: 100px;
+	width: 20px;
+	background: rgba(255, 255, 255, 0.5);
+	position: absolute;
+	transform: translateX(-80px) translateY(-35px) rotate(20deg) ;
+	transition: all 0.35s;
+	transition-timing-function: linear;
+
+
+} 
+
+.button:hover::before {
+	transform: translateX(500px) translateY(-35px) rotate(20deg);
+}
+
+
+/*.button.pro:before {
+	height: 500px;
+	transition: all 0.9s;
+	background-color: green;
+}
+
+.button.pro:hover::before {
+	transform: translateX(1500px) translateY(-35px) rotate(20deg);
+}*/
+
+.footer-icons {
+	height: 100%;
+	width: 100%;	
+
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content: space-around;
+	align-items: center;
+}
+
+.fa-instagram:hover {color: #E2CA87; font-size: 35px}
+.fa-twitter:hover {color: #86A2F7; font-size: 35px}
+.fa-youtube:hover {color: #EC7262; font-size: 35px}
+.fa-github:hover {color: #4DBD52; font-size: 35px}
+.fa-envelope:hover {color: #E2CA87; font-size: 35px}
+.fa-lightbulb:hover {font-size: 35px;}
+
+i.fa-lightbulb, body, .header, .footer, .header-text {
+	transition: all 0.2s linear;
+}
+
+i.fa-lightbulb {
+	transition: font-size 0.2s ease;
+}
+
+/*body {
+	transition: all 2s linear;
+}*/
+
+body.dark {
+	background-color: black;
+}
+
+body.dark .header, body.dark .footer {
+	background-color: #f2eded47;
+}
+
+body.dark .header-text {
+	color:  #d9d9d9;
+
+}
+
+body.dark .fa-lightbulb {
+	color: #e2ca87;
+}
+
+body.dark i, body.dark i {
+	color: #c5c5c5;
+
+}
+
+
+
+
+
